@@ -4,17 +4,12 @@
  *
  * Return: always 0
  */
+
 int main(void)
 
 {
 
-
-
 	long int a, b, c, d;
-
-
-
-
 
 
 
@@ -23,6 +18,7 @@ int main(void)
 	b = 2;
 
 	c = 3;
+
 	printf("%ld, ", a);
 
 	printf("%ld, ", b);
@@ -38,6 +34,7 @@ int main(void)
 		b = c;
 
 		c = a + b;
+
 	}
 
 	printf("%ld\n", c);
