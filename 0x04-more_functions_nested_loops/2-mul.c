@@ -1,5 +1,5 @@
 #include "main.h"
-
+0;276;0c
 
 
 
@@ -41,3 +41,4 @@ int mul(int a, int b)
 
 	return (c);
 
+}
