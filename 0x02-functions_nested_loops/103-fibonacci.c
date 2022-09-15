@@ -1,44 +1,52 @@
-#include <stdio.h>
-/**
- * main - print fibonacci
- *
- * Return: always 0
- */
+#include <iostream>
+using namespace std;
 
-int main(void)
+int sum(int n);
+int fib(int n);
 
-{
+const int N = 4000000;
 
-	long int a, b, c, d;
+int main() {
 
+  int i = 2;
 
+	cout << sum(i);
 
-	a = 1;
+	return 0;
+}
 
-	b = 2;
+int sum(int n) {
 
-	c = 3;
+	int sum = 0; // suma de los terminos pares
 
-	printf("%ld, ", a);
+	while (fib(n) < N) {
 
-	printf("%ld, ", b);
+		if (fib(n)%2==0) {
 
-	for (d = 3; d < 50; d++)
+			sum += fib(n);
+		}
 
-	{
-
-		printf("%ld, ", c);
-
-		a = b;
-
-		b = c;
-
-		c = a + b;
-
+		n++;
 	}
 
-	printf("%ld\n", c);
+	return sum;
+}
 
-	return (0);
+int fib(int n) {
 
+	int a = 0; // anterior
+	int b = 1; // posterior
+	int c = 0; // suma de a+b
+	int i = 1; // contador
+
+	while (i <= n) {
+
+		c = a + b;
+		a = b;
+		b = c;
+
+		i++;
+	}
+
+	return c;
 }
